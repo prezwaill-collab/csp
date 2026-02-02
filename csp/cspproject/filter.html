@@ -1,0 +1,16 @@
+<script>
+    function filter(){
+        var list=[1,-2,4,6,-9,23,100,-203];
+        var listnew=[];
+        var pos = 0;
+        for(i=0;i<list.length;i++){
+            if (list[i]>0){
+                listnew[pos] = list[i]
+                pos++;
+            }
+            
+        }
+        alert(listnew)
+    }
+    filter()
+</script>

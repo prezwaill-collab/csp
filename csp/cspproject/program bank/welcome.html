@@ -1,0 +1,69 @@
+<html>
+    <head>
+            <title>
+                bank
+            </title>
+            <script>
+                function checkbalance(){
+                    document.getElementById("show").innerText="your balance is"+sessionStorage.getItem("balance")
+
+                } 
+                function withdraw(){
+                    window.open("withdraw.html")
+                }
+                function deposit(){
+                    window.open("deposit.html")
+                }
+            </script>
+    </head>
+    <body>
+        <center><font size="25">Welcome to the banking system</font></center>
+        <center> <table border="2"> 
+            <tr>
+                <td colspan="2">
+            <center>
+               Choose your option 
+            </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  Check balance
+                </td>
+              
+            
+            <td>
+               <button type="submit" id="bt1" onclick="checkbalance()">check balance</button>
+            </td>
+            </tr>
+        </tr>
+        <tr>
+            <td>
+             Withdraw
+            </td>
+          
+        
+        <td>
+            <button type="submit" id="bt2" onclick="withdraw()">withdraw</button>
+        </td>
+        </tr>
+        <tr>
+            <td>
+             Deposit
+            </td>
+          
+        
+        <td>
+            <button type="submit" id="bt3" onclick="deposit()">deposit</button>
+        </td>
+        </tr>
+
+        </table></center>
+        <div><center>
+            <lable id="show"></lable>
+
+        </center>
+        </div>
+
+    </body>    
+</html>

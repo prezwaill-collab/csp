@@ -1,0 +1,65 @@
+<html>
+    <head>
+            <title>
+                bank
+            </title>
+            <script>
+                function login(){
+                    var name=document.getElementById("txt1").value;
+                    var password=document.getElementById("txt2").value;
+                    if(name=="John"&& password==123456){
+                        
+                        sessionStorage.setItem("balance",0);
+                        window.open("welcome.html");
+                    }
+                    else{
+                        alert("wrong name or password!")
+                    }
+                }
+            </script>
+    </head>
+    <body>
+        <center><font size="25">Welcome to the banking system</font></center>
+        <center> <table border="2"> 
+            <tr>
+                <td colspan="2">
+            <center>
+                Log in
+            </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Name:
+                </td>
+              
+            
+            <td>
+                <input type="text" id="txt1" ></input>
+            </td>
+            </tr>
+        </tr>
+        <tr>
+            <td>
+               Password:
+            </td>
+          
+        
+        <td>
+            <input type="password" id="txt2" ></input>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center>
+                    <button name="bt1" onclick="login()" type="button">Login</button>
+                </center>
+
+            </td>
+        </tr>
+           
+
+        </table></center>
+
+    </body>    
+</html>

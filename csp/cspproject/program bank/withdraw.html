@@ -1,0 +1,25 @@
+<html>
+    <head>
+            <title>
+                bank
+            </title>
+            <script>
+                
+                function withdraw(){
+                   var money=parseInt(sessionStorage.getItem('balance'));
+                  
+                   money=money-parseInt(document.getElementById('txt1').value);
+                
+                   sessionStorage.setItem("balance",money);
+                   alert('withdraw success');
+                }
+            </script>
+    </head>
+    <body>
+        <center><font size="25">Welcome to the banking system</font></center>
+       Enter the amount of money you want withdraw:<input type="text" id="txt1" ></input>
+       <button id="bt1" type="submit" onclick="withdraw()">withdraw</button>
+       <a href="welcome.html">Go back</a>
+
+    </body>
+</html>

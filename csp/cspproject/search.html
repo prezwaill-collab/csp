@@ -1,0 +1,30 @@
+<script>
+
+    function search(search_number){
+        var list1=[2,5,12,18,22,63,100,150,180]
+        var min=-1
+        var max=list1.length
+        var mid
+
+        while (min<max){
+            mid=Math.floor ((max+min)/2)
+            if (list1[mid]==search_number){
+                return mid;
+                // document.write ("found element "+list1[mid]+"\t at "+mid)
+                // break
+            }
+            else if(list1[mid]<search_number){
+                min=mid+1
+            }
+            else{
+                max = mid - 1
+            }
+        }
+        return -1;
+    }
+
+    var search_number = parseInt(prompt("enter value you want to search"))
+
+    var position = search(search_number)
+    document.write ("found element "+search_number+"\t at "+position)
+</script>

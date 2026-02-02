@@ -1,0 +1,172 @@
+<html>
+    <head>
+            
+            <script>
+               
+                    var name=prompt("Create your account")
+                    var password=prompt("Create your password")
+             
+                function login(){
+                    var name1=document.getElementById("txt1").value;
+                    var password1=document.getElementById("txt2").value;
+                    if(name==name1 && password==password1){
+                       alert("Welcome to the bank")
+                       sessionStorage.setItem("balance",0);
+                       success()
+                    }
+                    else{
+                        alert("Wrong password or account number, please try again")
+                    }
+                    }
+                    function success(){
+                        document.getElementById("success")
+                        // document.write(sessionStorage.getItem("balance"))
+                    }
+                    function checkbalance(){
+                        alert("Your balance is "+ sessionStorage.getItem("balance"))
+                    }
+                    function withdraw(){
+                        var withdraw = parseInt(prompt("How many do you want to withdraw?"))
+                        var balance = parseInt(sessionStorage.getItem("balance"))
+                        balance = balance - withdraw
+                        if(balance<0){
+                            alert("There's no enough balance")
+                            balance=balance + withdraw
+                        }
+                        else{
+                            alert("Withdraw success, your current balance is "+ balance)
+                        }
+                        sessionStorage.setItem("balance",balance)
+                    }
+                    function deposit(){
+                        var deposit = parseInt(prompt("How many do you want to deposit?"))
+                        var balance = parseInt(sessionStorage.getItem("balance"))
+                        balance = balance + deposit
+                            alert("Deposit success, your current balance is "+ balance)
+                            sessionStorage.setItem("balance",balance)
+                        }
+                        function loan(){
+                            var loanchoice=["2% for each year and last 2 years","1.5% for each year and last 4 years","0.5% for each year and last any years"]
+                            var choice = prompt("Choose your loan method "+ "\n" +"1. "+loanchoice[0]+ "\n" +"2. "+loanchoice[1]+ "\n" +"3. "+loanchoice[2])
+                        }
+                    
+
+            </script>
+    </head>
+    
+    <body>
+        account:<input type="text" id="txt1" ></input>
+        password:<input type="password" id="txt2" ></input>
+            <center>
+                <button name="bt1" onclick="login()" type="button">Login</button>
+            </center>
+
+
+            <div name="success">
+                <label id="success"></label>
+            <center> <table border="3"> 
+                <tr>
+                    <td colspan="3">
+                <center>
+                   Choose your option 
+                </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      Check balance
+                    </td>
+                  
+                
+                <td>
+                   <button type="submit" id="bt1" onclick="checkbalance()">check balance</button>
+                </td>
+                </tr>
+            </tr>
+            <tr>
+                <td>
+                 Withdraw
+                </td>
+              
+            
+            <td>
+                <button type="submit" id="bt2" onclick="withdraw()">withdraw</button>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                 Deposit
+                </td>
+              
+            
+            <td>
+                <button type="submit" id="bt3" onclick="deposit()">deposit</button>
+            </td>
+            </tr>
+    
+            
+        </tr>
+        <tr>
+            <td>
+              Loan
+            </td>
+          
+        
+        <td>
+           <button type="submit" id="bt4" onclick="loan()">loan choices</button>
+        </td>
+        </tr>
+    </tr>
+    <tr>
+    </table></center>
+           
+        </div>
+
+
+        <div id="show"></div>
+
+
+        <!-- <center><font size="25">Welcome to the banking system</font></center>
+        <center> <table border="2"> 
+            <tr>
+                <td colspan="2">
+            <center>
+                Log in
+            </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Name:
+                </td>
+              
+            
+            <td>
+                <input type="text" id="txt1" ></input>
+            </td>
+            </tr>
+        </tr>
+        <tr>
+            <td>
+               Password:
+            </td>
+          
+        
+        <td>
+            <input type="password" id="txt2" ></input>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center>
+                    <button name="bt1" onclick="login()" type="button">Login</button>
+                </center>
+
+            </td>
+        </tr>
+           
+
+        </table></center> -->
+
+    </body>    
+</html>
