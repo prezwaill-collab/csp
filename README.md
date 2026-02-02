@@ -1,5 +1,5 @@
 # csp
-csp project bank 
+csp project 
+with banking system developed by using html and javascript (version 1 and final version)
+and some sorting algorithem coded by using javascript.
 
-
-this is the bankning system developed by using html and javascript
